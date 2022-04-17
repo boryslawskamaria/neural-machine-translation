@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+for file in data/*;
+do
+python3 ./mbart50_m2m.py --input "$file" >> mbart_translated.txt &
+done
+wait
